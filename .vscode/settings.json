@@ -1,0 +1,11 @@
+{
+    "latex-workshop.latexindent.args": [
+        "-l",
+        "%DIR%/../latexindent.yaml",
+        "-m",
+        "-c",
+        "%DIR%",
+        "%TMPFILE%",
+        "-t"
+    ]
+}

@@ -1,0 +1,107 @@
+\documentclass[
+	USenglish,
+    ]{scrartcl}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{todonotes}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage[
+	capitalise,
+	nameinlink,
+	noabbrev,
+    ]{cleveref}
+
+% citations
+\usepackage[style=alphabetic]{biblatex}
+\addbibresource{references.bib}
+
+% better color scheme for hyperref links
+\definecolor{linkcolor}{RGB}{51,145,202}
+\hypersetup{
+	colorlinks=true,
+    citecolor=linkcolor,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+}
+
+% mathematical environments
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{claim}[theorem]{Claim}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+% title & author
+\title{Find a Fancy Title}
+% \subtitle{…}
+\author{Erika Mustermann}
+\subject{\small
+    Seminar Thesis for Methods of Algorithm Design, Summer Term 2021\\
+    Department of Informatics, Universität Hamburg
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	This is the abstract that should summarize your work in a few
+	sentences.
+\end{abstract}
+
+\tableofcontents
+
+\section{A First Section}
+
+Think about how to structure your thesis into sections and subsections.
+
+\subsection{Some Examples of Useful Features}
+
+Citing work by \textcite{DBLP:books/lib/Knuth97} as an example.
+
+Also possible without author names~\cite{DBLP:books/lib/Knuth97}.
+The bibtex entry in the file \texttt{references.bib} was copied from
+\href{https://dblp.org/rec/books/lib/Knuth97.html?view=bibtex}{DBLP}.
+
+\begin{definition}%
+
+	\label{def:example}
+	An example definition.
+\end{definition}
+
+Example of how to cite \cref{def:example} above.
+There are also environments for theorems, lemmas, and such.
+
+Moreover, you can define your own environments.
+See the preamble of the \LaTeX{} source for details.
+
+You may use the \verb|\todo| macro to write
+\enquote{todos}\todo{Don't forget to remove them before submission!} for
+yourself.
+\todo[inline]{Todos can also be written inline.}
+
+\subsection{A Second Subsection}
+content of subsection a
+
+…
+
+\section{A Second Section}
+
+…
+
+\printbibliography
+\end{document}
